@@ -9,6 +9,12 @@
 - **Favorites:** Enable users to save their favorite videos for easy access.
 
 
+**Tech Stack:**
+- **Frontend:** React Native for cross-platform mobile app development.
+- **Backend:** Firebase for real-time database and authentication.
+- **Video Storage:** Firebase Storage for storing and retrieving video files.
+- **Hosting:** Firebase Hosting for deploying the app.
+
 **Why This Project:**
 - **Value:** The project provides a simple and enjoyable way for users to watch and share funny baby laugh videos, spreading joy and happiness.
 - **Interest:** The project involves working with multimedia content and user interactions, making it an engaging and enjoyable development experience.
