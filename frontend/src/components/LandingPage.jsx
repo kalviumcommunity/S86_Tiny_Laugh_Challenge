@@ -1,13 +1,12 @@
 import React from 'react';
 import './LandingPage.css';
 
-const LandingPage = () => {
+const LandingPage = ({ onWatchClick }) => {
   return (
     <div className="landing-container">
       <header className="landing-header">
         <h1>Tiny Laugh Challenge</h1>
         <p>Try not to laugh at adorable baby giggles 😄</p>
-
       </header>
 
       <main className="landing-main">
@@ -18,15 +17,11 @@ const LandingPage = () => {
           </p>
         </section>
 
-        <section className="section">
-          <h2>🚀 Key Features</h2>
-          <ul>
-            <li>🎥 Video Library: Preloaded baby laughter videos</li>
-            <li>😂 Challenge Mode: Try not to laugh challenge</li>
-            <li>❤️ Like and Share: Spread the joy on social media</li>
-            <li>⭐ Favorites: Save your favorite giggles</li>
-          </ul>
-        </section>
+    
+
+        <button className="watch-button" onClick={onWatchClick}>
+          🎬 Watch Videos
+        </button>
       </main>
 
       <footer className="footer">

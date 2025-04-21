@@ -1,0 +1,49 @@
+/* VideoCard.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.video-card {
+  min-height: 100vh; /* Full screen height */
+  width: 100vw;       /* Full screen width */
+  background-color: #fff0f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.video-card h2 {
+  font-size: 2rem;
+  color: #d81b60;
+  margin-bottom: 1rem;
+}
+
+.video-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.back-btn {
+  background-color: #d81b60;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #ad1457;
+}
+
+
