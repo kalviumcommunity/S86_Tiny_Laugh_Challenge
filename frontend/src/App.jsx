@@ -1,32 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
-import VideoCard from './components/VideoCard';
+import VideoList from './components/VideoList';
 
 function App() {
-  const [showVideos, setShowVideos] = useState(false);
-
-  const handleWatchClick = () => {
-    setShowVideos(true);
-  };
-
-  const handleBackClick = () => {
-    setShowVideos(false);
-  };
-
-  const dummyVideo = {
-    title: 'Baby Laugh Compilation',
-    thumbnailUrl: 'https://i.ytimg.com/vi/HttF5HVYtlQ/maxresdefault.jpg',
-    videoUrl: 'https://www.youtube.com/embed/HttF5HVYtlQ',
-  };
-
   return (
-    <div>
-      {!showVideos ? (
-        <LandingPage onWatchClick={handleWatchClick} />
-      ) : (
-        <VideoCard {...dummyVideo} onBackClick={handleBackClick} />
-      )}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/videos" element={<VideoList />} />
+      </Routes>
+    </Router>
   );
 }
 

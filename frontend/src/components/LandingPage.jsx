@@ -1,7 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import './LandingPage.css';
 
-const LandingPage = ({ onWatchClick }) => {
+const LandingPage = () => {
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
+  // Function to handle button click and navigate to videos page
+  const handleWatchClick = () => {
+    navigate('/videos'); // Navigates to /videos endpoint
+  };
+
   return (
     <div className="landing-container">
       <header className="landing-header">
@@ -17,9 +25,7 @@ const LandingPage = ({ onWatchClick }) => {
           </p>
         </section>
 
-    
-
-        <button className="watch-button" onClick={onWatchClick}>
+        <button className="watch-button" onClick={handleWatchClick}>
           🎬 Watch Videos
         </button>
       </main>
