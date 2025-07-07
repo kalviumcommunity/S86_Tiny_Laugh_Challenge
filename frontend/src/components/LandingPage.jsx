@@ -1,13 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import './LandingPage.css';
 
 const LandingPage = () => {
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
+  // Function to handle button click and navigate to videos page
+  const handleWatchClick = () => {
+    navigate('/videos'); // Navigates to /videos endpoint
+  };
+
   return (
     <div className="landing-container">
       <header className="landing-header">
         <h1>Tiny Laugh Challenge</h1>
         <p>Try not to laugh at adorable baby giggles 😄</p>
-
       </header>
 
       <main className="landing-main">
@@ -18,15 +25,9 @@ const LandingPage = () => {
           </p>
         </section>
 
-        <section className="section">
-          <h2>🚀 Key Features</h2>
-          <ul>
-            <li>🎥 Video Library: Preloaded baby laughter videos</li>
-            <li>😂 Challenge Mode: Try not to laugh challenge</li>
-            <li>❤️ Like and Share: Spread the joy on social media</li>
-            <li>⭐ Favorites: Save your favorite giggles</li>
-          </ul>
-        </section>
+        <button className="watch-button" onClick={handleWatchClick}>
+          🎬 Watch Videos
+        </button>
       </main>
 
       <footer className="footer">

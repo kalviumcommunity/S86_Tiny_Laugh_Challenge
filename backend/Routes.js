@@ -15,6 +15,18 @@ router.post('/', async (req, res) => {
 });
 
 
+router.post('/videos', async (req, res) => {
+  try {
+    const newVideo = new Video(req.body);
+    await newVideo.save();
+    res.status(201).json(newVideo);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+
+
 router.get('/', async (req, res) => {
   try {
     const videos = await Video.find().sort({ createdAt: -1 });

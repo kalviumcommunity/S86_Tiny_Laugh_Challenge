@@ -1,11 +1,16 @@
 import React from 'react';
-import LandingPage from './components/LandingPage'; // Import your landing page component
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import VideoList from './components/VideoList';
 
 function App() {
   return (
-    <div>
-      <LandingPage /> {/* Render the LandingPage component */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/videos" element={<VideoList />} />
+      </Routes>
+    </Router>
   );
 }
 
